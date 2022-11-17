@@ -30,8 +30,7 @@ def NavioJogador():
 
         while linhajogador not in (0, 1, 2, 3, 4):  # Caso ele tente posicionar em um local que não existe
             print("Valor Invalido!")  # Eu faço ele digitar de novo, mas caso ele tente colocar um barco no mesmo lugar
-            linhajogador = int(
-                input("Escolha a linha: "))  # ele consegue, pq caso ele faça isso ele que vai sair perdendo
+            linhajogador = int(input("Escolha a linha: "))  # ele consegue, pq caso ele faça isso ele que vai sair perdendo
 
         colunajogador = int(input("Escolha a coluna: "))
 
@@ -70,8 +69,7 @@ def AtirarComputador():
     linhaC = int(random.randint(0, 4))  # Aqui eu faço o computador atirar randomicamente
     colunaC = int(
         random.randint(0, 9))  # Caso ele tente acertar um local que ele ja acertou, eu fiz ele escolher outro número
-    while jogador[linhaC][colunaC] == '\33[7;49;32mX\033[m' or jogador[linhaC][
-        colunaC] == '\33[7;49;31mO\033[m':  # VERDE
+    while jogador[linhaC][colunaC] == '\33[7;49;32mX\033[m' or jogador[linhaC][colunaC] == '\33[7;49;31mO\033[m':  # VERDE
         linhaC = int(random.randint(0, 4))
         colunaC = int(random.randint(0, 9))
     return linhaC, colunaC
